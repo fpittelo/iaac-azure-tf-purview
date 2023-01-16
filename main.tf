@@ -34,3 +34,27 @@ resource "azurerm_purview_account" "iaac_data" {
     type                      = var.purview_sys_identity
   }
 }
+
+##### subscription test      #####
+
+##### List all subscriptions with azurerm_subscriptions #####
+
+data "azurerm_subscriptions" "available" {
+}
+
+output "available_subscriptions" {
+  value = data.azurerm_subscriptions.available.subscriptions
+}
+
+output "first_available_subscription_display_name" {
+  value = data.azurerm_subscriptions.available.subscriptions[0].display_name
+}
+
+##### access information about an existing Subscription #####
+
+data "azurerm_subscription" "current" {
+}
+
+output "current_subscription_display_name" {
+  value = data.azurerm_subscription.current.display_name
+}

@@ -53,28 +53,28 @@ variable "vm_owner" {
 
 # Azure Resource Group Name for the project
 variable "rg_name" {
-  default     = "iaac-azure-tf-purview"
+  default     = "iaac-data"
   type        = string
   description = "Azure Resource Group Name for the project"
 }
 
 # Variable defining the managed resource group name
 variable "purview_mrg_name" {
-  default     = "iaac-azure-tf-purview-mrg"
+  default     = "iaac-data-mrg-name"
   type        = string
   description = "managed resource group name"
 }
 
 # Variable defining purview name
 variable "purview_name" {
-  default     = "iaac-purview"
+  default     = "iaac-data"
   type        = string
-  description = "purview name"
+  description = "iaac-data purview name"
 }
 
 # Variable for principal id
 variable "purview_principal_id" {
-  default     = "fpi-uami"
+  default     = "iaac-data-uami"
   type        = string
   description = "principal id"
 }
@@ -91,11 +91,4 @@ variable "purview_sys_identity" {
   type    = string
   default = "SystemAssigned"
   description = "system identity"
-}
-
-# Variable for UserAssigned identity
-variable "purview_UserAssigned_id" {
-  type    = list
-  default = ["fpi-uami"]
-  description = "UserAssigned identity"
 }
