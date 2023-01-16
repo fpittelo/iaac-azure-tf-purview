@@ -53,7 +53,7 @@ variable "vm_owner" {
 
 # Azure Resource Group Name for the project
 variable "rg_name" {
-  default     = "iaac-data"
+  default     = "azure-tf-purview"
   type        = string
   description = "Azure Resource Group Name for the project"
 }
