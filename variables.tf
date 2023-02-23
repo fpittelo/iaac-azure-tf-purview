@@ -88,7 +88,7 @@ variable "purview_ua_identity" {
 
 # Variable for system identity
 variable "purview_sys_identity" {
-  type    = string
-  default = "SystemAssigned"
+  type        = string
+  default     = "SystemAssigned"
   description = "system identity"
 }
