@@ -29,9 +29,7 @@ resource "azurerm_purview_account" "iaac_data" {
   }
 
   identity {
-#   principal_id              = var.purview_principal_id
-#   tenant_id                 = var.tenant_id
-    type                      = var.purview_sys_identity
+    type                      = "SystemAssigned"
   }
 }
 
